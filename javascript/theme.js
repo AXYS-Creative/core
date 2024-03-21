@@ -2,8 +2,8 @@ const themeToggle = document.querySelector(".theme-toggle-btn");
 const platformHeadlineImg = document.querySelector(".platform-headline-img");
 const statementImg = document.querySelector(".statement-img");
 
-const ICON_LIGHT = "./public/enzy-logo-icon-light.svg";
-const ICON_DARK = "./public/enzy-logo-icon-dark.svg";
+const ICON_LIGHT = "./public/core-logo-icon-light.svg";
+const ICON_DARK = "./public/core-logo-icon-dark.svg";
 
 const swapImage = () => {
   const newSrc = getCurrentTheme() === ICON_LIGHT ? ICON_DARK : ICON_LIGHT;

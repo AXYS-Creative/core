@@ -1,18 +1,24 @@
-$primary-font: "Saira", sans-serif; /* 300-700 only, per brand guide */
+$primary-font: "Sarpanch", sans-serif; /* 400-900 limit */
 $secondary-font: "Plus Jakarta Sans", sans-serif; // Not listed
 
 // Utility Colors
-$black: #020202;
+$black: #040404;
 $yellow-light: #79e076;
 $yellow-dark: #737000;
 
-// Enzy Brand Colors
-$white: #fcfeff;
-$grey-dark: #231f20;
-$grey-light: #d9dadb;
+// Core Brand Colors
+$white: #fcfcfc;
+// $grey-dark: #231f20;
+// $grey-light: #d9dadb;
 $pale: #90ffd7;
-$green-light: #6ca793;
-$green-dark: #4c7567;
+// $green-light: #6ca793;
+// $green-dark: #4c7567;
+
+$grey-dark: #011425;
+$grey-light: #d0d0d0;
+$hero-1: #1f4959;
+$hero-2: #1f4959;
+// $hero-2: #011425;
 
 // Partial Opacity | 40 = 25%, 80 = 50%, BF = 75%
 $black-opaque: #02020240;
@@ -22,12 +28,12 @@ $white-opaque: #fcfeff40;
   --background-color: #{$grey-light};
   --primary-font-color: #{$black};
   --primary-font-color-opaque: #{$black-opaque};
-  --primary-accent-color: #{$green-light};
+  --primary-accent-color: #{$hero-1};
   --secondary-accent-color: #{$pale};
 
   --cta-1-text-color-hover: #{$black};
   --underline-item-color: #{$grey-dark};
-  --success: #{$green-dark};
+  --success: #{$hero-2};
   --error: #{$yellow-dark};
 }
 
@@ -36,12 +42,12 @@ $white-opaque: #fcfeff40;
     --background-color: #{$grey-dark};
     --primary-font-color: #{$white};
     --primary-font-color-opaque: #{$white-opaque};
-    --primary-accent-color: #{$green-dark};
-    --secondary-accent-color: #{$green-light};
+    --primary-accent-color: #{$hero-2};
+    --secondary-accent-color: #{$hero-1};
 
     --cta-1-text-color-hover: #{$white};
     --underline-item-color: #{$grey-light};
-    --success: #{$green-light};
+    --success: #{$hero-1};
     --error: #{$yellow-light};
   }
 }

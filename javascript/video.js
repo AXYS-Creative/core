@@ -1,28 +1,28 @@
 let mqTouch = window.matchMedia("(hover: none) and (pointer: coarse)");
 
-const enzyVideo = document.querySelector(".enzy-video"),
+const coreVideo = document.querySelector(".core-video"),
   videoToggleBtn = document.querySelector(".video-toggle-btn"),
   playIconWrapper = document.querySelector(".play-icon-wrapper"),
   pauseIconWrapper = document.querySelector(".pause-icon-wrapper");
 
 const toggleVideoPlayState = () => {
-  if (enzyVideo.paused || enzyVideo.ended) {
-    enzyVideo.play();
+  if (coreVideo.paused || coreVideo.ended) {
+    coreVideo.play();
     videoToggleBtn.style.opacity = "0";
     playIconWrapper.style.display = "none";
     pauseIconWrapper.style.display = "flex";
   } else {
-    enzyVideo.pause();
+    coreVideo.pause();
     videoToggleBtn.style.opacity = "1";
     playIconWrapper.style.display = "flex";
     pauseIconWrapper.style.display = "none";
   }
 };
 
-enzyVideo.addEventListener("click", toggleVideoPlayState);
+coreVideo.addEventListener("click", toggleVideoPlayState);
 videoToggleBtn.addEventListener("click", toggleVideoPlayState);
 
-enzyVideo.addEventListener("keydown", (e) => {
+coreVideo.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     toggleVideoPlayState();
   }
@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
-        enzyVideo.pause();
+        coreVideo.pause();
         videoToggleBtn.style.opacity = "1";
         playIconWrapper.style.display = "flex";
         pauseIconWrapper.style.display = "none";
@@ -52,4 +52,4 @@ const observer = new IntersectionObserver(
   }
 );
 
-observer.observe(enzyVideo);
+observer.observe(coreVideo);

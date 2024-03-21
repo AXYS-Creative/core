@@ -7,7 +7,7 @@
     background: rgba($pale, 0.75);
 
     @include mq-dark {
-      background: rgba($green-light, 0.75);
+      background: rgba($hero-1, 0.75);
     }
   }
 
@@ -22,10 +22,10 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: $green-dark transparent;
+  scrollbar-color: $hero-2 transparent;
 
   @include mq-dark {
-    scrollbar-color: $green-light transparent;
+    scrollbar-color: $hero-1 transparent;
   }
 }
 
@@ -37,24 +37,24 @@ body {
     --background-color: #{$grey-dark};
     --primary-font-color: #{$white};
     --primary-font-color-opaque: #{$white-opaque};
-    --primary-accent-color: #{$green-dark};
-    --secondary-accent-color: #{$green-light};
+    --primary-accent-color: #{$hero-2};
+    --secondary-accent-color: #{$hero-1};
 
     --cta-1-text-color-hover: #{$white};
     --underline-item-color: #{$grey-light};
-    --success: #{$green-light};
+    --success: #{$hero-1};
     --error: #{$yellow-light};
 
     @include mq-dark {
       --background-color: #{$grey-light};
       --primary-font-color: #{$black};
       --primary-font-color-opaque: #{$black-opaque};
-      --primary-accent-color: #{$green-light};
+      --primary-accent-color: #{$hero-1};
       --secondary-accent-color: #{$pale};
 
       --cta-1-text-color-hover: #{$black};
       --underline-item-color: #{$grey-dark};
-      --success: #{$green-dark};
+      --success: #{$hero-2};
       --error: #{$yellow-dark};
     }
   }
@@ -68,6 +68,8 @@ body {
 }
 
 header {
+  $logo-text-width: 73px;
+
   & > * {
     z-index: 5;
   }
@@ -78,7 +80,7 @@ header {
     top: 56px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
     mix-blend-mode: difference;
 
     @include mq-min("xxxl") {
@@ -99,9 +101,8 @@ header {
     }
 
     .logo-text {
-      width: 52px;
+      width: $logo-text-width;
       height: 20px;
-      translate: 0 2px;
       object-fit: cover;
       object-position: left;
       transition: 0.2s ease;
@@ -280,7 +281,7 @@ header {
   &.menu-active {
     .header-logo {
       .logo-text {
-        width: 52px;
+        width: $logo-text-width;
         transition: 0.2s ease 0.65s;
       }
     }
@@ -506,7 +507,7 @@ nav {
 
     .theme-toggle-tooltip {
       @include row-center;
-      width: 96px;
+      width: 98px;
       font-family: $primary-font;
       font-size: 14px;
       position: absolute;

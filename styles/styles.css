@@ -1,26 +1,26 @@
-/* 300-700 only, per brand guide */
+/* 400-900 limit */
 :root {
-  --background-color: #d9dadb;
-  --primary-font-color: #020202;
+  --background-color: #d0d0d0;
+  --primary-font-color: #040404;
   --primary-font-color-opaque: rgba(2, 2, 2, 0.2509803922);
-  --primary-accent-color: #6ca793;
+  --primary-accent-color: #1f4959;
   --secondary-accent-color: #90ffd7;
-  --cta-1-text-color-hover: #020202;
-  --underline-item-color: #231f20;
-  --success: #4c7567;
+  --cta-1-text-color-hover: #040404;
+  --underline-item-color: #011425;
+  --success: #1f4959;
   --error: #737000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #231f20;
-    --primary-font-color: #fcfeff;
+    --background-color: #011425;
+    --primary-font-color: #fcfcfc;
     --primary-font-color-opaque: rgba(252, 254, 255, 0.2509803922);
-    --primary-accent-color: #4c7567;
-    --secondary-accent-color: #6ca793;
-    --cta-1-text-color-hover: #fcfeff;
-    --underline-item-color: #d9dadb;
-    --success: #6ca793;
+    --primary-accent-color: #1f4959;
+    --secondary-accent-color: #1f4959;
+    --cta-1-text-color-hover: #fcfcfc;
+    --underline-item-color: #d0d0d0;
+    --success: #1f4959;
     --error: #79e076;
   }
 }
@@ -40,10 +40,10 @@ this will interfere with the line by line animation */
 }
 @media (prefers-color-scheme: dark) {
   *::-moz-selection {
-    background: rgba(108, 167, 147, 0.75);
+    background: rgba(31, 73, 89, 0.75);
   }
   *::selection {
-    background: rgba(108, 167, 147, 0.75);
+    background: rgba(31, 73, 89, 0.75);
   }
 }
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus {
@@ -53,11 +53,11 @@ this will interfere with the line by line animation */
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: #4c7567 transparent;
+  scrollbar-color: #1f4959 transparent;
 }
 @media (prefers-color-scheme: dark) {
   html {
-    scrollbar-color: #6ca793 transparent;
+    scrollbar-color: #1f4959 transparent;
   }
 }
 
@@ -66,26 +66,26 @@ body {
   color: var(--primary-font-color);
 }
 body.theme-swap {
-  --background-color: #231f20;
-  --primary-font-color: #fcfeff;
+  --background-color: #011425;
+  --primary-font-color: #fcfcfc;
   --primary-font-color-opaque: rgba(252, 254, 255, 0.2509803922);
-  --primary-accent-color: #4c7567;
-  --secondary-accent-color: #6ca793;
-  --cta-1-text-color-hover: #fcfeff;
-  --underline-item-color: #d9dadb;
-  --success: #6ca793;
+  --primary-accent-color: #1f4959;
+  --secondary-accent-color: #1f4959;
+  --cta-1-text-color-hover: #fcfcfc;
+  --underline-item-color: #d0d0d0;
+  --success: #1f4959;
   --error: #79e076;
 }
 @media (prefers-color-scheme: dark) {
   body.theme-swap {
-    --background-color: #d9dadb;
-    --primary-font-color: #020202;
+    --background-color: #d0d0d0;
+    --primary-font-color: #040404;
     --primary-font-color-opaque: rgba(2, 2, 2, 0.2509803922);
-    --primary-accent-color: #6ca793;
+    --primary-accent-color: #1f4959;
     --secondary-accent-color: #90ffd7;
-    --cta-1-text-color-hover: #020202;
-    --underline-item-color: #231f20;
-    --success: #4c7567;
+    --cta-1-text-color-hover: #040404;
+    --underline-item-color: #011425;
+    --success: #1f4959;
     --error: #737000;
   }
 }
@@ -105,7 +105,7 @@ header .header-logo {
   top: 56px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
   mix-blend-mode: difference;
 }
 @media screen and (max-width: 1512px) {
@@ -138,9 +138,8 @@ header .header-logo .logo-icon {
   }
 }
 header .header-logo .logo-text {
-  width: 52px;
+  width: 73px;
   height: 20px;
-  translate: 0 2px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: left;
@@ -263,16 +262,16 @@ header .menu-btn-wrapper .menu-btn .menu-btn-text-wrapper {
   overflow: hidden;
 }
 header .menu-btn-wrapper .menu-btn .menu-btn-text {
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   text-transform: uppercase;
-  color: #fcfeff;
+  color: #fcfcfc;
   font-size: 14px;
   transition: 0.2s ease;
 }
 header .menu-btn-wrapper .menu-btn-dot {
   width: 4px;
   height: 4px;
-  background: #fcfeff;
+  background: #fcfcfc;
   transition: 0.3s ease;
 }
 header .menu-btn-wrapper .menu-btn.menu-active {
@@ -308,7 +307,7 @@ header.scroll-active .menu-btn-wrapper {
   transition: all 0.3s ease, opacity 0.2s ease 0.12s;
 }
 header.menu-active .header-logo .logo-text {
-  width: 52px;
+  width: 73px;
   transition: 0.2s ease 0.65s;
 }
 header.menu-active .menu-btn-wrapper {
@@ -365,7 +364,7 @@ nav .nav-links li a,
 nav .nav-footer-links li a,
 nav .nav-social-media li a,
 nav .theme-toggle-wrapper li a {
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
 }
 nav .nav-links {
   left: 64px;
@@ -565,8 +564,8 @@ nav .theme-toggle-wrapper .theme-toggle-tooltip {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 96px;
-  font-family: "Saira", sans-serif;
+  width: 98px;
+  font-family: "Sarpanch", sans-serif;
   font-size: 14px;
   position: absolute;
   right: 200%;
@@ -596,7 +595,7 @@ nav .nav-abstract {
   bottom: 0;
   width: 100vw;
   height: 24px;
-  background: #020202;
+  background: #040404;
   animation: nav-abstract-default 0.75s ease 0s forwards;
 }
 nav.menu-active {
@@ -735,7 +734,7 @@ footer .footer-link:hover, footer .footer-link:focus {
 h1,
 h2,
 h3 {
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   text-transform: uppercase;
   line-height: 100%;
 }
@@ -883,7 +882,7 @@ ul {
 
 .cta-1 {
   position: relative;
-  color: #fcfeff;
+  color: #fcfcfc;
   border-radius: 4px;
   transition: color 0.3s ease 0.2s;
 }
@@ -1113,7 +1112,7 @@ ul {
   bottom: 0;
   width: 100vw;
   height: 0;
-  background: #020202;
+  background: #040404;
 }
 .loading-screen.load-complete {
   pointer-events: none;
@@ -1532,7 +1531,7 @@ ul {
   align-self: flex-end;
 }
 #hero-section .hero-headline .companion-text {
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   font-size: 18px;
 }
 @media screen and (max-width: 1512px) {
@@ -1649,7 +1648,7 @@ ul {
   }
 }
 #hero-section .hero-background-text p {
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   font-size: min(36vw, 720px);
   opacity: 0.02;
   line-height: 0;
@@ -1759,7 +1758,7 @@ ul {
 }
 #video-section .video-wrapper video:hover + .video-toggle-btn, #video-section .video-wrapper video:focus-within + .video-toggle-btn {
   opacity: 1 !important;
-  border: 2px solid #fcfeff;
+  border: 2px solid #fcfcfc;
   scale: 1.12;
 }
 #video-section .video-wrapper video:hover + .video-toggle-btn .play-icon-wrapper,
@@ -1777,12 +1776,12 @@ ul {
 #video-section .video-wrapper video:hover + .video-toggle-btn .play-icon-wrapper svg,
 #video-section .video-wrapper video:hover + .video-toggle-btn .pause-icon-wrapper svg, #video-section .video-wrapper video:focus-within + .video-toggle-btn .play-icon-wrapper svg,
 #video-section .video-wrapper video:focus-within + .video-toggle-btn .pause-icon-wrapper svg {
-  fill: #fcfeff;
+  fill: #fcfcfc;
 }
 @media (hover: none) and (pointer: coarse) {
   #video-section .video-wrapper video + .video-toggle-btn {
     scale: 1.12;
-    border: 2px solid #fcfeff;
+    border: 2px solid #fcfcfc;
   }
   #video-section .video-wrapper video + .video-toggle-btn .play-icon-wrapper,
   #video-section .video-wrapper video + .video-toggle-btn .pause-icon-wrapper {
@@ -1790,7 +1789,7 @@ ul {
   }
   #video-section .video-wrapper video + .video-toggle-btn .play-icon-wrapper svg,
   #video-section .video-wrapper video + .video-toggle-btn .pause-icon-wrapper svg {
-    fill: #fcfeff;
+    fill: #fcfcfc;
   }
 }
 #video-section .video-wrapper .video-toggle-btn {
@@ -1801,10 +1800,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #231f20;
+  background: #011425;
   width: 96px;
   height: 96px;
-  border: 2px solid rgba(252, 254, 255, 0.5);
+  border: 2px solid rgba(252, 252, 252, 0.5);
   border-radius: 50%;
   overflow: hidden;
   transition: 0.25s ease;
@@ -1822,7 +1821,7 @@ ul {
   }
 }
 #video-section .video-wrapper .video-toggle-btn:hover, #video-section .video-wrapper .video-toggle-btn:focus {
-  border: 2px solid #fcfeff;
+  border: 2px solid #fcfcfc;
   opacity: 1 !important;
   scale: 1.12;
 }
@@ -1841,7 +1840,7 @@ ul {
 #video-section .video-wrapper .video-toggle-btn:hover .play-icon-wrapper svg,
 #video-section .video-wrapper .video-toggle-btn:hover .pause-icon-wrapper svg, #video-section .video-wrapper .video-toggle-btn:focus .play-icon-wrapper svg,
 #video-section .video-wrapper .video-toggle-btn:focus .pause-icon-wrapper svg {
-  fill: #fcfeff;
+  fill: #fcfcfc;
 }
 #video-section .video-wrapper .video-toggle-btn .play-icon-wrapper,
 #video-section .video-wrapper .video-toggle-btn .pause-icon-wrapper {
@@ -1861,7 +1860,7 @@ ul {
 #video-section .video-wrapper .video-toggle-btn .play-icon-wrapper svg,
 #video-section .video-wrapper .video-toggle-btn .pause-icon-wrapper svg {
   width: 16px;
-  fill: rgba(252, 254, 255, 0.5);
+  fill: rgba(252, 252, 252, 0.5);
 }
 @media screen and (max-width: 768px) {
   #video-section .video-wrapper .video-toggle-btn .play-icon-wrapper svg,
@@ -1889,11 +1888,11 @@ ul {
   background-repeat: no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(#fcfeff, #fcfeff);
-  -webkit-text-fill-color: rgba(252, 254, 255, 0.36);
+  background-image: linear-gradient(#fcfcfc, #fcfcfc);
+  -webkit-text-fill-color: rgba(252, 252, 252, 0.36);
   transition: background 1s cubic-bezier(0.12, 0.76, 0.64, 1);
   filter: drop-shadow(0px 0px 1px #231f20);
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   font-size: min(3.85vw, 72px);
   font-weight: 700;
   line-height: 100%;
@@ -2648,7 +2647,7 @@ ul {
   background-image: linear-gradient(var(--primary-font-color), var(--primary-font-color));
   -webkit-text-fill-color: var(--primary-font-color-opaque);
   transition: background 1s cubic-bezier(0.12, 0.76, 0.64, 1);
-  font-family: "Saira", sans-serif;
+  font-family: "Sarpanch", sans-serif;
   font-size: 36px;
   font-weight: 300;
 }
