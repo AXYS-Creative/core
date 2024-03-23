@@ -6,6 +6,8 @@ import "./scroll.js";
 import "./loading.js";
 import "./theme.js";
 import "./platform.js";
+import "./magnet.js";
+import "./mouse-cursor.js";
 
 // Clear focus from any element (except inputs) on mousemove
 (function clearFocusOnMouseMove() {

@@ -11,8 +11,6 @@ $white: #fcfcfc;
 // $grey-dark: #231f20;
 // $grey-light: #d9dadb;
 $pale: #90ffd7;
-// $green-light: #6ca793;
-// $green-dark: #4c7567;
 
 $grey-dark: #011425;
 $grey-light: #d0d0d0;
@@ -33,7 +31,7 @@ $white-opaque: #fcfeff40;
 
   --cta-1-text-color-hover: #{$black};
   --underline-item-color: #{$grey-dark};
-  --success: #{$hero-2};
+  --success: #{$black};
   --error: #{$yellow-dark};
 }
 
@@ -47,7 +45,7 @@ $white-opaque: #fcfeff40;
 
     --cta-1-text-color-hover: #{$white};
     --underline-item-color: #{$grey-light};
-    --success: #{$hero-1};
+    --success: #{$pale};
     --error: #{$yellow-light};
   }
 }
@@ -74,6 +72,8 @@ $horizontal-section-padding-md: 48px;
 // Easing
 
 $cubic-ease: cubic-bezier(0.06, 0.88, 0.34, 1);
+$cubic-ease-mouse: cubic-bezier(0, 0.49, 0.4, 1.19);
+$cubic-ease-magnet: cubic-bezier(0.05, 1.75, 0.75, 1.75);
 
 // Debugging
 
