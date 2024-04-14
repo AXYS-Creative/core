@@ -1,25 +1,117 @@
-@mixin row-center {
+//
+// Media Queries
+//
+
+$max-breakpoints: (
+  "xs": 389px,
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "xxl": 1512px,
+  "xxxl": 1920px,
+);
+
+@mixin mq-max($breakpoint) {
+  $value: map-get($max-breakpoints, $breakpoint);
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+$min-breakpoints: (
+  "xs": 390px,
+  "sm": 481px,
+  "md": 769px,
+  "lg": 1025px,
+  "xl": 1201px,
+  "xxl": 1513px,
+  "xxxl": 1921px,
+);
+
+@mixin mq-min($breakpoint) {
+  $value: map-get($min-breakpoints, $breakpoint);
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+// Users that prefer dark theme
+@mixin mq-dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// Users on tables and smart phones
+@mixin mq-touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+// Users on computers and laptops
+@mixin mq-mouse {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+// Users that don't mind animations (motion)
+@mixin mq-motion-allow {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+// Users that are sensitive to motion. Use this to remove animations.
+@mixin mq-motion-reduce {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+//
+// Flex Layout
+//
+
+@mixin row-center($justify-content: center) {
   display: flex;
-  justify-content: center;
+  justify-content: $justify-content;
   align-items: center;
 }
 
-@mixin row-between {
+@mixin row-start($justify-content: center) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@mixin column-left {
-  display: flex;
-  flex-direction: column;
+  justify-content: $justify-content;
   align-items: flex-start;
+}
+
+@mixin row-end($justify-content: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: flex-end;
+}
+
+@mixin column-center($justify-content: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: center;
+}
+
+@mixin column-start($justify-content: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: flex-start;
+}
+
+@mixin column-end($justify-content: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: flex-end;
 }
 
 @mixin absolute-center {
@@ -28,6 +120,10 @@
   left: 50%;
   translate: -50% -50%;
 }
+
+//
+//
+//
 
 // Video Section - width/height
 @mixin video-wrapper-portrait {
@@ -161,75 +257,5 @@ this will interfere with the line by line animation */
 
   @include mq-max("md") {
     right: $body-padding-md;
-  }
-}
-
-// Media Queries
-$max-breakpoints: (
-  "xs": 389px,
-  "sm": 480px,
-  "md": 768px,
-  "lg": 1024px,
-  "xl": 1280px,
-  "xxl": 1512px,
-  "xxxl": 1920px,
-);
-
-@mixin mq-max($breakpoint) {
-  $value: map-get($max-breakpoints, $breakpoint);
-  @media screen and (max-width: $value) {
-    @content;
-  }
-}
-
-$min-breakpoints: (
-  "xs": 390px,
-  "sm": 481px,
-  "md": 769px,
-  "lg": 1025px,
-  "xl": 1201px,
-  "xxl": 1513px,
-  "xxxl": 1921px,
-);
-
-@mixin mq-min($breakpoint) {
-  $value: map-get($min-breakpoints, $breakpoint);
-  @media screen and (min-width: $value) {
-    @content;
-  }
-}
-
-// Users that prefer dark theme
-@mixin mq-dark {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-// Users on tables and smart phones
-@mixin mq-touch {
-  @media (hover: none) and (pointer: coarse) {
-    @content;
-  }
-}
-
-// Users on computers and laptops
-@mixin mq-mouse {
-  @media (hover: hover) and (pointer: fine) {
-    @content;
-  }
-}
-
-// Users that don't mind animations (motion)
-@mixin mq-motion-allow {
-  @media (prefers-reduced-motion: no-preference) {
-    @content;
-  }
-}
-
-// Users that are sensitive to motion. Use this to remove animations.
-@mixin mq-motion-reduce {
-  @media (prefers-reduced-motion: reduce) {
-    @content;
   }
 }

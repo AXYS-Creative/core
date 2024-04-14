@@ -206,7 +206,7 @@ header {
       }
 
       .menu-btn-text-wrapper {
-        @include column-left;
+        @include column-start;
         position: absolute;
         top: 50%;
         left: 0;
@@ -349,7 +349,7 @@ nav {
 
   .nav-links {
     @include left-spacing;
-    @include column-left;
+    @include column-start;
     gap: 12px;
     top: 50%;
     translate: 0 -50%;
@@ -423,7 +423,7 @@ nav {
     }
 
     @include mq-max("md") {
-      @include column-left;
+      @include column-start;
       gap: 12px;
       bottom: $body-padding-xxl;
     }
@@ -619,7 +619,7 @@ footer {
 }
 
 footer {
-  @include row-between;
+  @include row-center(space-between);
   padding-top: $body-padding;
   padding-bottom: $body-padding;
 
@@ -628,7 +628,7 @@ footer {
   }
 
   @include mq-max("sm") {
-    @include column-left;
+    @include column-start;
     padding-bottom: $body-padding;
   }
 
@@ -1122,112 +1122,3 @@ ul {
     }
   }
 }
-
-// Utility
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-// Media query classes
-
-.lg-screen-and-up {
-  display: none;
-
-  @include mq-min("lg") {
-    display: flex; // Flex for cta-wrapper
-  }
-}
-
-.lg-screen-and-below {
-  display: none;
-
-  @include mq-max("lg") {
-    display: flex;
-  }
-}
-
-.md-screen-and-up {
-  display: none;
-
-  @include mq-min("md") {
-    display: flex;
-  }
-}
-
-.md-screen-and-below {
-  display: none;
-
-  @include mq-max("md") {
-    display: flex;
-  }
-}
-
-.sm-screen-and-up {
-  display: none;
-
-  @include mq-min("sm") {
-    display: flex;
-  }
-}
-
-.sm-screen-and-below {
-  display: none;
-
-  @include mq-max("sm") {
-    display: flex;
-  }
-}
-
-.xs-screen-and-up {
-  display: none;
-
-  @include mq-min("xs") {
-    display: flex;
-  }
-}
-
-.xs-screen-and-below {
-  display: none;
-
-  @include mq-max("xs") {
-    display: flex;
-  }
-}
-
-// Exploring Netlify Identity (sign up / login controls)
-// div[data-netlify-identity-menu] {
-//   position: fixed;
-//   top: $body-padding;
-//   left: 50%;
-//   translate: -50% 0;
-
-//   ul.netlify-identity-menu {
-//     list-style: none;
-//     @include row-center;
-//     gap: 12px;
-
-//     // a.netlify-identity-signup {
-//     //   text-decoration: underline;
-//     // }
-
-//     // a.netlify-identity-login {
-//     //   text-decoration: underline;
-//     // }
-
-//     span.netlify-identity-user {
-//       font-family: $primary-font;
-//     }
-//   }
-// }
-
-// #netlify-identity-widget {
-//   border: $test;
-// }
