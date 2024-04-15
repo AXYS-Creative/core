@@ -1,6 +1,7 @@
 const cursor = document.querySelector(".mouse-cursor"),
   logo = document.querySelector(".header-logo"),
-  menuBtn = document.querySelector(".menu-btn");
+  menuBtn = document.querySelector(".menu-btn"),
+  themeToggleBtn = document.querySelector(".theme-toggle-btn");
 
 const navLinks = document.querySelectorAll(".nav-link"),
   navFooterLinks = document.querySelectorAll(".nav-footer-link"),
@@ -79,18 +80,31 @@ socialMediaLinks.forEach((link) => {
   });
 });
 
-menuBtn.addEventListener("mousemove", () => {
-  const menuBtnRect = menuBtn.getBoundingClientRect();
-  const centerX = menuBtnRect.left + menuBtnRect.width / 2;
-  const centerY = menuBtnRect.top + menuBtnRect.height / 2;
+function handleMouseMove(event, element) {
+  const elementRect = element.getBoundingClientRect();
+  const centerX = elementRect.left + elementRect.width / 2;
+  const centerY = elementRect.top + elementRect.height / 2;
   cursor.style.transform = `translate(${centerX - cursor.offsetWidth / 2}px, ${
     centerY - cursor.offsetHeight / 2
   }px)`;
   cursor.classList.add("menu-btn-active");
   followMouse = false;
+}
+
+menuBtn.addEventListener("mousemove", (event) => {
+  handleMouseMove(event, menuBtn);
 });
 
 menuBtn.addEventListener("mouseleave", () => {
+  cursor.classList.remove("menu-btn-active");
+  followMouse = true;
+});
+
+themeToggleBtn.addEventListener("mousemove", (event) => {
+  handleMouseMove(event, themeToggleBtn);
+});
+
+themeToggleBtn.addEventListener("mouseleave", () => {
   cursor.classList.remove("menu-btn-active");
   followMouse = true;
 });

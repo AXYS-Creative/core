@@ -1,0 +1,19 @@
+.marquee {
+  overflow: hidden;
+  width: 100vw;
+  max-width: $content-width;
+  translate: calc($body-padding-md * -1) 0;
+
+  // @include mq-max("md") {
+  //   translate: calc($content-padding-md * -1) 0;
+  // }
+
+  .marquee-inner {
+    display: inline-flex;
+  }
+
+  p {
+    display: flex;
+    text-wrap: nowrap;
+  }
+}

@@ -1,5 +1,5 @@
-$primary-font: "Archivo", sans-serif;
-$secondary-font: "Plus Jakarta Sans", sans-serif;
+$font-family-heading: "Archivo", sans-serif;
+$font-family-body: "Plus Jakarta Sans", sans-serif;
 
 // Utility Colors
 $black: #040404;
@@ -8,15 +8,12 @@ $yellow-dark: #737000;
 
 // Core Brand Colors
 $white: #fcfcfc;
-// $grey-dark: #231f20;
-// $grey-light: #d9dadb;
+$grey-dark: #231f20;
+$grey-light: #d9dadb;
 $pale: #90ffd7;
 
-$grey-dark: #0d141b;
-$grey-light: #d0d0d0;
 $hero-1: #1f4959;
-$hero-2: #1f4959;
-// $hero-2: #011425;
+$hero-2: #44889b;
 
 // Partial Opacity | 40 = 25%, 80 = 50%, BF = 75%
 $black-opaque: #02020240;
@@ -29,6 +26,7 @@ $white-opaque: #fcfeff40;
   --primary-accent-color: #{$hero-1};
   --secondary-accent-color: #{$pale};
 
+  --cta-1-text-color: #{$grey-light};
   --cta-1-text-color-hover: #{$black};
   --underline-item-color: #{$grey-dark};
   --success: #{$black};
@@ -43,6 +41,7 @@ $white-opaque: #fcfeff40;
     --primary-accent-color: #{$hero-2};
     --secondary-accent-color: #{$hero-1};
 
+    --cta-1-text-color: #{$white};
     --cta-1-text-color-hover: #{$white};
     --underline-item-color: #{$grey-light};
     --success: #{$pale};

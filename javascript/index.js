@@ -1,11 +1,13 @@
-import "./nav.js";
-import "./video.js";
-import "./faq.js";
-import "./form.js";
-import "./scroll.js";
-import "./loading.js";
+import "./components/nav.js";
+import "./components/video.js";
+import "./components/faq.js";
+import "./components/form.js";
+import "./components/loading.js";
+import "./components/platform.js";
+import "./components/magnet.js";
+import "./components/marquee.js";
+import "./components/mouse-cursor.js";
+
 import "./theme.js";
-import "./platform.js";
-import "./magnet.js";
-import "./mouse-cursor.js";
+import "./scroll.js";
 import "./utility.js";
