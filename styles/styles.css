@@ -1446,13 +1446,13 @@ ul {
 @keyframes hero-img-1-fade {
   to {
     opacity: 1;
-    translate: 15% 2%;
+    translate: 15% 3%;
   }
 }
 @keyframes hero-img-2-fade {
   to {
     opacity: 1;
-    translate: -15% -2%;
+    translate: -15% -3%;
   }
 }
 @keyframes reset-translate {
@@ -1850,7 +1850,7 @@ ul {
   opacity: 0;
 }
 #hero-section .hero-img img:first-of-type {
-  translate: 15% 6%;
+  translate: 15% 8%;
 }
 @media (prefers-reduced-motion: reduce) {
   #hero-section .hero-img img:first-of-type {
@@ -1859,7 +1859,7 @@ ul {
   }
 }
 #hero-section .hero-img img:last-of-type {
-  translate: -15% -6%;
+  translate: -15% -8%;
 }
 @media (prefers-reduced-motion: reduce) {
   #hero-section .hero-img img:last-of-type {
@@ -2026,6 +2026,7 @@ ul {
 #video-section .video-wrapper video {
   width: 100%;
   cursor: pointer;
+  border-radius: 8px;
 }
 #video-section .video-wrapper video:hover + .video-toggle-btn, #video-section .video-wrapper video:focus-within + .video-toggle-btn {
   opacity: 1 !important;

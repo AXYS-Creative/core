@@ -136,7 +136,7 @@
       opacity: 0;
 
       &:first-of-type {
-        translate: 15% 6%;
+        translate: 15% 8%;
 
         @include mq-motion-reduce {
           opacity: 1;
@@ -145,7 +145,7 @@
       }
 
       &:last-of-type {
-        translate: -15% -6%;
+        translate: -15% -8%;
 
         @include mq-motion-reduce {
           opacity: 1;
@@ -330,6 +330,7 @@
     video {
       width: 100%;
       cursor: pointer;
+      border-radius: 8px;
 
       &:hover,
       &:focus-within {
