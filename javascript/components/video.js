@@ -2,17 +2,20 @@ let mqTouch = window.matchMedia("(hover: none) and (pointer: coarse)");
 
 const coreVideo = document.querySelector(".core-video"),
   videoToggleBtn = document.querySelector(".video-toggle-btn"),
+  videoToggleBtnText = document.querySelector(".video-toggle-btn__inner-text"),
   playIconWrapper = document.querySelector(".play-icon-wrapper"),
   pauseIconWrapper = document.querySelector(".pause-icon-wrapper");
 
 const toggleVideoPlayState = () => {
   if (coreVideo.paused || coreVideo.ended) {
     coreVideo.play();
+    videoToggleBtnText.innerHTML = "Pause Video";
     videoToggleBtn.style.opacity = "0";
     playIconWrapper.style.display = "none";
     pauseIconWrapper.style.display = "flex";
   } else {
     coreVideo.pause();
+    videoToggleBtnText.innerHTML = "Play Video";
     videoToggleBtn.style.opacity = "1";
     playIconWrapper.style.display = "flex";
     pauseIconWrapper.style.display = "none";

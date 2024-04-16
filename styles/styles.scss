@@ -200,7 +200,7 @@
 
   .hero-background-text {
     position: absolute;
-    top: 32%;
+    top: 48%;
     left: 50%;
     translate: -50% 0;
     z-index: -1;
@@ -211,14 +211,14 @@
 
     p {
       font-family: $font-family-heading;
-      font-size: min(32vw, 680px);
-      opacity: 0.02;
+      font-size: min(32vw, 640px);
+      opacity: 0.01;
       line-height: 0;
       user-select: none;
 
-      @include mq-dark {
-        opacity: 0.0075;
-      }
+      // @include mq-dark {
+      //   opacity: 0.0075;
+      // }
     }
   }
 

@@ -7,6 +7,7 @@ import "./components/platform.js";
 import "./components/magnet.js";
 import "./components/marquee.js";
 import "./components/mouse-cursor.js";
+import "./components/parallax.js";
 
 import "./theme.js";
 import "./scroll.js";

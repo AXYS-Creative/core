@@ -1914,7 +1914,7 @@ ul {
 }
 #hero-section .hero-background-text {
   position: absolute;
-  top: 32%;
+  top: 48%;
   left: 50%;
   translate: -50% 0;
   z-index: -1;
@@ -1926,17 +1926,12 @@ ul {
 }
 #hero-section .hero-background-text p {
   font-family: "Archivo", sans-serif;
-  font-size: min(32vw, 680px);
-  opacity: 0.02;
+  font-size: min(32vw, 640px);
+  opacity: 0.01;
   line-height: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-@media (prefers-color-scheme: dark) {
-  #hero-section .hero-background-text p {
-    opacity: 0.0075;
-  }
 }
 @media (prefers-reduced-motion: no-preference) {
   #hero-section.load-complete .hero-headline h1::before {

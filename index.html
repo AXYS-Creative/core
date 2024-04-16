@@ -43,9 +43,6 @@
           alt="Core logo text"
         />
       </a>
-      <!-- <div data-netlify-identity-menu> -->
-      <!-- <div data-netlify-identity-button>Login with Netlify Identity</div> -->
-      <!-- </div> -->
       <div class="cta-wrapper header-cta-wrapper">
         <a class="cta-2" href="">
           <span class="cta-2-text">Sign in</span>
@@ -318,7 +315,7 @@
           <img src="./assets/images/platform-img-3.png" alt="" />
         </figure>
         <div
-          class="hero-background-text"
+          class="hero-background-text parallax-element"
           role="complementary"
           aria-hidden="true"
         >
@@ -333,6 +330,7 @@
             src="./assets/core.mp4"
           ></video>
           <button class="video-toggle-btn tab-element-page">
+            <span class="sr-only video-toggle-btn__inner-text">Play Video</span>
             <span class="play-icon-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path
@@ -931,7 +929,7 @@
               type="text"
               name="name"
               placeholder=" "
-              aria-labelledby="Please enter your full name."
+              aria-label="Please enter your full name."
               required
             />
             <label for="name" class="label">Full name</label>
@@ -944,7 +942,7 @@
               type="email"
               name="email"
               placeholder=" "
-              aria-labelledby="Please enter your Email address."
+              aria-label="Please enter your Email address."
               required
             />
             <label for="email" class="label">Email address</label>
@@ -957,7 +955,7 @@
               type="text"
               name="company"
               placeholder=" "
-              aria-labelledby="Please enter your company name."
+              aria-label="Please enter your company name."
               required
             />
             <label for="company" class="label">Company name</label>
@@ -1032,6 +1030,7 @@
                 class="social-media-link tab-element-page"
                 href="https://www.instagram.com/axyscreative/"
               >
+                <span class="sr-only">instagram</span>
                 <span class="social-media-icon-wrapper">
                   <svg
                     class="social-media-icon"
@@ -1067,6 +1066,7 @@
                 class="social-media-link tab-element-page"
                 href="https://twitter.com/AXYSCreative"
               >
+                <span class="sr-only">twitter</span>
                 <span class="social-media-icon-wrapper">
                   <svg
                     class="social-media-icon"
@@ -1099,6 +1099,7 @@
             </li>
             <li class="magnet">
               <a class="social-media-link tab-element-page" href="">
+                <span class="sr-only">tiktok</span>
                 <span class="social-media-icon-wrapper">
                   <svg
                     class="social-media-icon"
