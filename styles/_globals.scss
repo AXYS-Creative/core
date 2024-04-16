@@ -815,7 +815,7 @@ ul {
     transition: color 0.3s ease 0s;
 
     &::before {
-      border-radius: 8px;
+      border-radius: 0;
       width: 80%;
       height: 3px;
       transition: height 0.24s ease 0s, width 0.24s ease 0.2s;

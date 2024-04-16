@@ -985,7 +985,6 @@ ul {
   left: 0;
   width: 4px;
   height: 0;
-  border-radius: 1px;
   background: var(--primary-accent-color);
   transition: 0.3s ease 0s;
 }
@@ -1107,7 +1106,7 @@ ul {
   transition: color 0.3s ease 0s;
 }
 .cta-1:hover::before, .cta-1:focus::before {
-  border-radius: 8px;
+  border-radius: 0;
   width: 80%;
   height: 3px;
   transition: height 0.24s ease 0s, width 0.24s ease 0.2s;
@@ -1793,7 +1792,6 @@ ul {
   left: 0;
   width: 4px;
   height: 0;
-  border-radius: 1px;
   background: var(--primary-accent-color);
 }
 @media (prefers-reduced-motion: reduce) {
