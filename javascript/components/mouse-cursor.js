@@ -1,14 +1,10 @@
 const cursor = document.querySelector(".mouse-cursor"),
-  logo = document.querySelector(".header-logo"),
   menuBtn = document.querySelector(".menu-btn"),
   themeToggleBtn = document.querySelector(".theme-toggle-btn");
 
-const navLinks = document.querySelectorAll(".nav-link"),
-  navFooterLinks = document.querySelectorAll(".nav-footer-link"),
-  socialMediaLinks = document.querySelectorAll(".social-media-link"),
-  cta1 = document.querySelectorAll(".cta-1"),
+const socialMediaLinks = document.querySelectorAll(".social-media-link"),
   cta2 = document.querySelectorAll(".cta-2"),
-  faqItems = document.querySelectorAll(".faq-item");
+  cursorVanish = document.querySelectorAll(".cursor-vanish");
 
 let followMouse = true;
 cursor.style.opacity = 0; // Initially hide when loading the site
@@ -31,12 +27,8 @@ const cursorHoverVanish = (elem) => {
   });
 };
 
-// Attaching vanish to individual elements
-cursorHoverVanish(logo);
-// Attaching events to NodeList items
-[...cta1, ...faqItems, ...navLinks, ...navFooterLinks].forEach(
-  cursorHoverVanish
-);
+// Hide mouse cursor per class
+cursorVanish.forEach(cursorHoverVanish);
 
 // Toggle sibling selector (dot, icon, etc...)
 const cursorHoverSibling = (elements, querySelector, activeClass) => {
