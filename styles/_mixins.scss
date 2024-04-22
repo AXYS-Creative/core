@@ -209,7 +209,11 @@ $min-breakpoints: (
   width: min(64%, 1024px);
 
   @include mq-max("xl") {
-    width: 68%;
+    width: 74%;
+  }
+
+  @include mq-max("lg") {
+    width: 78%;
   }
 
   @include mq-max("md") {
