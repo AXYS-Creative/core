@@ -630,16 +630,22 @@ footer {
   padding-bottom: $body-padding;
 
   @include mq-max("md") {
-    padding-bottom: $body-padding-md;
-  }
-
-  @include mq-max("sm") {
     @include column-start;
-    padding-bottom: $body-padding;
+    padding-bottom: $body-padding-md;
   }
 
   .footer-credits {
     @include column-center;
+    gap: 12px;
+    translate: 0 13px;
+
+    @include mq-max("md") {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 8px;
+      translate: 0;
+    }
   }
 
   .footer-link,
@@ -647,8 +653,14 @@ footer {
     padding-bottom: 8px;
     font-size: 14px;
 
-    @include mq-max("md") {
+    @include mq-max("sm") {
       font-size: 12px;
+    }
+  }
+
+  .copyright {
+    @include mq-max("sm") {
+      font-size: 10px;
     }
   }
 
@@ -656,7 +668,7 @@ footer {
     border-bottom: 2px solid transparent;
     transition: 0.2s ease;
 
-    @include mq-max("sm") {
+    @include mq-max("md") {
       order: -1;
       margin-bottom: 12px;
     }
@@ -664,6 +676,26 @@ footer {
     &:hover,
     &:focus {
       border-color: var(--primary-accent-color);
+    }
+  }
+
+  .made-by-axys {
+    @include mq-max("md") {
+      translate: 0 -4px;
+    }
+
+    @include mq-max("sm") {
+      translate: 0 0;
+    }
+
+    a {
+      font-size: 12px;
+
+      @include mq-max("sm") {
+        font-size: 10px;
+        display: flex;
+        translate: 0 7px;
+      }
     }
   }
 }
@@ -918,12 +950,13 @@ ul {
     &:hover,
     &:focus {
       .social-media-icon-wrapper {
-        translate: 0 -40%;
+        // translate: 0 -40%;
 
         .social-media-icon {
+          scale: 1.25;
+
           path {
-            // fill: var(--primary-accent-color);
-            fill: $pale;
+            fill: var(--primary-accent-color);
           }
         }
       }
@@ -936,6 +969,8 @@ ul {
       transition: 0.25s ease;
 
       .social-media-icon {
+        transition: 0.25s ease;
+
         path {
           fill: var(--primary-font-color);
           transition: 0.2s ease;
@@ -1079,9 +1114,9 @@ ul {
 }
 
 .mouse-cursor {
-  $fade-border: rgba($white, 0.12);
+  $fade-border: rgba($hero-1, 0.75);
 
-  border: 1px solid $pale;
+  border: 1px solid var(--primary-accent-color);
   position: fixed;
   top: 0;
   width: 48px;
@@ -1127,7 +1162,7 @@ ul {
   &.cta-2-active {
     width: 36px;
     height: 36px;
-    border-color: $pale;
+    border-color: var(--primary-accent-color);
   }
 }
 
