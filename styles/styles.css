@@ -290,7 +290,7 @@ header > * {
 header .header-logo {
   left: 64px;
   position: fixed;
-  top: 56px;
+  top: 50px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -313,7 +313,7 @@ header .header-logo {
 }
 @media screen and (max-width: 768px) {
   header .header-logo {
-    top: 38px;
+    top: 34px;
   }
 }
 header .header-logo .logo-icon {

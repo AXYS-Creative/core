@@ -79,7 +79,7 @@ header {
   .header-logo {
     @include left-spacing;
     position: fixed;
-    top: 56px;
+    top: 50px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -90,7 +90,7 @@ header {
     }
 
     @include mq-max("md") {
-      top: 38px;
+      top: 34px;
     }
 
     .logo-icon {
