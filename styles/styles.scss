@@ -1494,8 +1494,7 @@
       }
     }
 
-    .success-message,
-    .error-message {
+    .status-message {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -1523,17 +1522,7 @@
         translate: -50% 64px;
       }
 
-      &.active {
-        opacity: 1;
-        pointer-events: all;
-
-        .check-icon,
-        .error-icon {
-          scale: 1.2;
-        }
-      }
-
-      .check-icon,
+      .success-icon,
       .error-icon {
         flex-shrink: 0;
         width: 24px;
@@ -1542,10 +1531,20 @@
         scale: 0.5;
         transition: 0.3s ease 0.24s;
       }
+
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+
+        .success-icon,
+        .error-icon {
+          scale: 1.2;
+        }
+      }
     }
 
     .success-message {
-      .check-icon {
+      .success-icon {
         border: 1px solid var(--success);
         border-radius: 50%;
 
