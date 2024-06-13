@@ -20,12 +20,15 @@ const setImagesSrc = (src) => {
 const getCurrentTheme = () => statementImg.getAttribute("src");
 
 const applyThemeBasedOnPreference = () => {
-  const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? ICON_LIGHT
-    : ICON_DARK;
+  const prefersDarkScheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const theme = prefersDarkScheme ? ICON_LIGHT : ICON_DARK;
   setImagesSrc(theme);
   updateAriaAttributes(theme);
-  document.body.classList.toggle("theme-swap", theme === ICON_DARK);
+
+  console.log("prefersDarkScheme", prefersDarkScheme);
+  console.log("theme", theme);
 };
 
 const toggleTheme = () => {
@@ -34,12 +37,12 @@ const toggleTheme = () => {
 };
 
 const updateAriaAttributes = (theme) => {
-  const isDarkTheme = theme === ICON_LIGHT;
+  const isDarkTheme = theme === ICON_DARK;
   themeToggle.setAttribute("aria-pressed", isDarkTheme);
   themeStatus.textContent = isDarkTheme ? "Dark theme" : "Light theme";
   themeToggle.setAttribute(
     "aria-label",
-    isDarkTheme ? "Switch to light theme" : "Switch to dark theme"
+    isDarkTheme ? "Switch to dark theme" : "Switch to light theme"
   );
 };
 
