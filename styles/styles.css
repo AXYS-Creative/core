@@ -1355,6 +1355,21 @@ ul {
   opacity: 0;
   animation: loading-dot 1.4s ease 0.2s forwards;
 }
+@media screen and (max-width: 1024px) {
+  .loading-screen__loading-text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .loading-screen__loading-text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .loading-screen__loading-text {
+    font-size: 14px;
+  }
+}
 .loading-screen.load-complete {
   pointer-events: none;
 }
