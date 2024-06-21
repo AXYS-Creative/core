@@ -671,6 +671,10 @@ footer {
       margin-bottom: 12px;
     }
 
+    @include mq-max("sm") {
+      margin-bottom: 24px;
+    }
+
     &:hover,
     &:focus {
       border-color: var(--primary-accent-color);
@@ -682,7 +686,6 @@ footer {
       @include mq-max("sm") {
         font-size: 10px;
         display: flex;
-        translate: 0 7px;
       }
     }
   }

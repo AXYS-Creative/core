@@ -938,6 +938,11 @@ footer .footer-link {
     margin-bottom: 12px;
   }
 }
+@media screen and (max-width: 480px) {
+  footer .footer-link {
+    margin-bottom: 24px;
+  }
+}
 footer .footer-link:hover, footer .footer-link:focus {
   border-color: var(--primary-accent-color);
 }
@@ -945,7 +950,6 @@ footer .footer-link:hover, footer .footer-link:focus {
   footer .made-by-axys a {
     font-size: 10px;
     display: flex;
-    translate: 0 7px;
   }
 }
 

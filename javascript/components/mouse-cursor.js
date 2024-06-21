@@ -108,10 +108,12 @@ themeToggleBtn.addEventListener("mouseleave", () => {
 // Video Hover
 //
 
-coreVideo.addEventListener("mousemove", (e) => {
-  videoToggleBtn.style.translate = `calc(${e.clientX}px - calc(50vw + 50%)) calc(${e.clientY}px - calc(50vh + 50%))`;
-});
+if (window.matchMedia("(pointer: fine)").matches) {
+  coreVideo.addEventListener("mousemove", (e) => {
+    videoToggleBtn.style.translate = `calc(${e.clientX}px - calc(50vw + 50%)) calc(${e.clientY}px - calc(50vh + 50%))`;
+  });
 
-coreVideo.addEventListener("mouseleave", () => {
-  videoToggleBtn.style.translate = "-50% -50%";
-});
+  coreVideo.addEventListener("mouseleave", () => {
+    videoToggleBtn.style.translate = "-50% -50%";
+  });
+}
