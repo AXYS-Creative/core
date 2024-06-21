@@ -1,6 +1,9 @@
+import { coreVideo } from "./video.js";
+
 const cursor = document.querySelector(".mouse-cursor"),
   menuBtn = document.querySelector(".menu-btn"),
-  themeToggleBtn = document.querySelector(".theme-toggle-btn");
+  themeToggleBtn = document.querySelector(".theme-toggle-btn"),
+  videoToggleBtn = document.querySelector(".video-toggle-btn");
 
 const socialMediaLinks = document.querySelectorAll(".social-media-link"),
   cta2 = document.querySelectorAll(".cta-2"),
@@ -72,7 +75,7 @@ socialMediaLinks.forEach((link) => {
   });
 });
 
-function handleMouseMove(event, element) {
+const handleMouseMove = (event, element) => {
   const elementRect = element.getBoundingClientRect();
   const centerX = elementRect.left + elementRect.width / 2;
   const centerY = elementRect.top + elementRect.height / 2;
@@ -81,7 +84,7 @@ function handleMouseMove(event, element) {
   }px)`;
   cursor.classList.add("menu-btn-active");
   followMouse = false;
-}
+};
 
 menuBtn.addEventListener("mousemove", (event) => {
   handleMouseMove(event, menuBtn);
@@ -99,4 +102,16 @@ themeToggleBtn.addEventListener("mousemove", (event) => {
 themeToggleBtn.addEventListener("mouseleave", () => {
   cursor.classList.remove("menu-btn-active");
   followMouse = true;
+});
+
+//
+// Video Hover
+//
+
+coreVideo.addEventListener("mousemove", (e) => {
+  videoToggleBtn.style.translate = `calc(${e.clientX}px - calc(50vw + 50%)) calc(${e.clientY}px - calc(50vh + 50%))`;
+});
+
+coreVideo.addEventListener("mouseleave", () => {
+  videoToggleBtn.style.translate = "-50% -50%";
 });

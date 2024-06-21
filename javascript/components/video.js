@@ -1,6 +1,6 @@
 let mqTouch = window.matchMedia("(hover: none) and (pointer: coarse)");
 
-const coreVideo = document.querySelector(".core-video"),
+export const coreVideo = document.querySelector(".core-video"),
   videoToggleBtn = document.querySelector(".video-toggle-btn"),
   videoToggleBtnText = document.querySelector(".video-toggle-btn__inner-text"),
   playIconWrapper = document.querySelector(".play-icon-wrapper"),

@@ -380,7 +380,8 @@
       border: 2px solid rgba($white, 0.5);
       border-radius: 50%;
       overflow: hidden;
-      transition: 0.25s ease;
+      pointer-events: none;
+      transition: 0.25s ease, translate 1s $cubic-ease-mouse;
 
       @include mq-max("xxl") {
         width: 72px;
