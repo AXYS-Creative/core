@@ -899,38 +899,34 @@ footer {
     padding-bottom: 24px;
   }
 }
-footer .footer-credits {
+footer .footer-links__group {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  translate: 0 13px;
+  gap: 48px;
+}
+@media screen and (max-width: 1024px) {
+  footer .footer-links__group {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .footer-links__group {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
 }
 @media screen and (max-width: 768px) {
   footer .footer-credits {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    gap: 8px;
-    translate: 0;
   }
 }
 footer .footer-link,
 footer .copyright {
-  padding-bottom: 8px;
-  font-size: 14px;
-}
-@media screen and (max-width: 480px) {
-  footer .footer-link,
-  footer .copyright {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 480px) {
-  footer .copyright {
-    font-size: 10px;
-  }
+  font-size: 12px;
 }
 footer .footer-link {
   border-bottom: 2px solid transparent;
@@ -944,19 +940,6 @@ footer .footer-link {
 }
 footer .footer-link:hover, footer .footer-link:focus {
   border-color: var(--primary-accent-color);
-}
-@media screen and (max-width: 768px) {
-  footer .made-by-axys {
-    translate: 0 -4px;
-  }
-}
-@media screen and (max-width: 480px) {
-  footer .made-by-axys {
-    translate: 0 0;
-  }
-}
-footer .made-by-axys a {
-  font-size: 12px;
 }
 @media screen and (max-width: 480px) {
   footer .made-by-axys a {
@@ -1362,6 +1345,16 @@ ul {
   height: 0;
   background: #040404;
 }
+.loading-screen__loading-text {
+  font-size: 20px;
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  translate: -50% 0;
+  color: var(--success);
+  opacity: 0;
+  animation: loading-dot 1.4s ease 0.2s forwards;
+}
 .loading-screen.load-complete {
   pointer-events: none;
 }
@@ -1379,6 +1372,10 @@ ul {
 }
 .loading-screen.load-complete .loading-screen-abstract {
   animation: nav-abstract-open 0.75s ease 0.5s forwards;
+}
+.loading-screen.load-complete .loading-screen__loading-text {
+  opacity: 1;
+  animation: drop-opacity 0.8s ease 0s forwards;
 }
 
 .presentation-content {

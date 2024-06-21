@@ -27,8 +27,7 @@ const applyThemeBasedOnPreference = () => {
   setImagesSrc(theme);
   updateAriaAttributes(theme);
 
-  console.log("prefersDarkScheme", prefersDarkScheme);
-  console.log("theme", theme);
+  // console.log("prefersDarkScheme", prefersDarkScheme);
 };
 
 const toggleTheme = () => {
