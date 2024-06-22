@@ -1,3 +1,4 @@
+import { isSafari } from "../utility.js";
 import { coreVideo } from "./video.js";
 
 const cursor = document.querySelector(".mouse-cursor"),
@@ -116,4 +117,10 @@ if (window.matchMedia("(pointer: fine)").matches) {
   coreVideo.addEventListener("mouseleave", () => {
     videoToggleBtn.style.translate = "-50% -50%";
   });
+}
+
+// Safari - glitchy transition on mouseCursor
+if (isSafari()) {
+  cursor.style.transition = "none";
+  videoToggleBtn.style.transition = "none";
 }
