@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background: var(--background-color);
   color: var(--primary-font-color);
 

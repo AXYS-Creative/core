@@ -11,7 +11,7 @@ const attemptCompleteLoading = () => {
       loadingScreen.classList.add("load-complete");
       loadingScreen.setAttribute("aria-hidden", "true");
       hero.classList.add("load-complete");
-      document.body.style = "overflow: auto;";
+      document.body.style = "overflow-y: auto;";
     }
   }
 };
