@@ -145,7 +145,7 @@ const checkScroll = () => {
     fillTextEffect(elem, fillElementOffsetTop, elem.offsetHeight);
   });
 
-  // Video visibility
+  // Video visibility & scale
   const isVideoVisible =
     scrollPosition + windowHeight > vidWrapperOffsetTop &&
     scrollPosition < vidWrapperOffsetTop + vidWrapperHeight;
@@ -156,6 +156,10 @@ const checkScroll = () => {
     scrollProgress = Math.min(Math.max(scrollProgress, 0.25), 1); // Change the max() second argument to determine min opacity
     const videoOpacity = scrollProgress;
     vidWrapper.style.opacity = videoOpacity;
+
+    scrollProgress = Math.min(Math.max(scrollProgress, 0.9), 1); // Change the max() second argument to determine min opacity
+    const videoScale = scrollProgress;
+    vidWrapper.style.scale = videoScale;
   }
 };
 

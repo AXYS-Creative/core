@@ -9,23 +9,25 @@
   margin-top: 96px;
   overflow: hidden;
 
-  @include mq-max("xxl") {
-    margin-top: 72px;
-  }
+  @media all {
+    @include mq-max("xxl") {
+      margin-top: 72px;
+    }
 
-  @include mq-max("lg") {
-    flex-direction: column;
-    align-items: center;
-    gap: 96px;
-    padding-bottom: 360px;
-  }
+    @include mq-max("lg") {
+      flex-direction: column;
+      align-items: center;
+      gap: 96px;
+      padding-bottom: 360px;
+    }
 
-  @include mq-max("md") {
-    padding-bottom: 320px;
-  }
+    @include mq-max("md") {
+      padding-bottom: 320px;
+    }
 
-  @include mq-max("sm") {
-    padding-bottom: 420px;
+    @include mq-max("sm") {
+      padding-bottom: 420px;
+    }
   }
 
   .hero-headline {
@@ -96,6 +98,7 @@
     }
 
     .companion-text {
+      color: var(--error);
       font-family: $font-family-heading;
       font-size: 18px;
 
@@ -314,6 +317,7 @@
     top: 50%;
     translate: 0 -50%;
     margin-bottom: -148px; // Adjust space between video and paragraph
+    transition: 1.6s $cubic-ease;
 
     @include mq-max("xxl") {
       margin-bottom: -96px;

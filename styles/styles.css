@@ -1866,6 +1866,7 @@ ul {
   align-self: flex-end;
 }
 #hero-section .hero-headline .companion-text {
+  color: var(--error);
   font-family: "Archivo", sans-serif;
   font-size: 18px;
 }
@@ -2055,6 +2056,7 @@ ul {
   top: 50%;
   translate: 0 -50%;
   margin-bottom: -148px;
+  transition: 1.6s cubic-bezier(0.06, 0.88, 0.34, 1);
 }
 @media screen and (max-width: 1280px) {
   #video-section .video-wrapper {
